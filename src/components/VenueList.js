@@ -8,6 +8,14 @@ const List = styled('div')`
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   margin: 40px;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 550px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const VenueList = props => {

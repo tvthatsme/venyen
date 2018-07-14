@@ -6,10 +6,10 @@ const fontSize = 35;
 const SearchBar = styled('div')`
   display: flex;
   justify-content: center;
-  font-family: 'Racing Sans One', cursive;
   max-width: calc(100vw - 20px);
-  margin: 0 auto;
+  margin: 20px auto 0;
   padding: 15px 0;
+  text-align: center;
 `;
 
 const Text = styled('p')`

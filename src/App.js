@@ -17,8 +17,7 @@ injectGlobal`
     overflow: auto;
     margin: 0;
     padding: 0;
-
-    @import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
   }
 `;
 
