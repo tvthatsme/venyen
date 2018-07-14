@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-const fontColor = '#414656';
-
 const VenueCard = styled('div')`
   position: relative;
   background-color: white;
@@ -70,22 +68,21 @@ const LearnMoreLink = styled('a')`
   }
 `;
 
+/**
+ * Responsible for displaying the venue information in a card format
+ */
 const Venue = props => {
+  const { venue } = props;
   return (
     <VenueCard>
-      <Title>{props.venue.venue.name}</Title>
+      <Title>{venue.name}</Title>
       <CategoryAndAddress>
-        {props.venue.venue.categories[0].name} -{' '}
-        {props.venue.venue.location.address}
+        {venue.category} - {venue.address}
       </CategoryAndAddress>
-      <Tip>“{props.venue.tips[0].text}”</Tip>
+      <Tip>“{venue.tip}”</Tip>
       <LinkArea>
-        {props.venue.venue.url && (
-          <LearnMoreLink
-            href={props.venue.venue.url}
-            rel="noopener"
-            target="_blank"
-          >
+        {venue.link && (
+          <LearnMoreLink href={venue.link} rel="noopener" target="_blank">
             Learn more →
           </LearnMoreLink>
         )}

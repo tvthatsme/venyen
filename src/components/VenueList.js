@@ -18,11 +18,14 @@ const List = styled('div')`
   }
 `;
 
+/**
+ * Responsible for rendering a collection of venue cards
+ */
 const VenueList = props => {
   return (
     <List>
       {props.venues.map(venue => {
-        return <Venue key={venue.venue.id} venue={venue} />;
+        return <Venue key={venue.id} venue={venue} />;
       })}
     </List>
   );

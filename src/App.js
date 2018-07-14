@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { injectGlobal } from 'emotion';
 import Search from './components/Search';
 import FoursquareVenues from './components/FoursquareVenues';
+import GeoLocation from './components/GeoLocation';
 
 injectGlobal`
   * {
@@ -26,7 +27,11 @@ class App extends Component {
     return (
       <React.Fragment>
         <Search />
-        <FoursquareVenues />
+        <GeoLocation
+          render={(lat, lng) => {
+            return <FoursquareVenues lat={lat} lng={lng} />;
+          }}
+        />
       </React.Fragment>
     );
   }

@@ -36,17 +36,23 @@ const Selections = styled('a')`
   }
 `;
 
+/**
+ * Responsible for showing the search and, in the future, letting
+ * the user adjust the search criteria
+ */
 class Search extends Component {
   render() {
     return (
       <SearchBar>
         <div>
-          <Text>Searching for</Text>
+          <Text>Searching for all venues around your current location</Text>
+          {/* In the future this can be expanded on */}
+          {/* <Text>Searching for</Text>
           <Selections href="#">all venues</Selections>
           <Text>within</Text>
           <Selections href="#">50km</Selections>
           <Text>of</Text>
-          <Selections href="#">my current location</Selections>
+          <Selections href="#">my current location</Selections> */}
         </div>
       </SearchBar>
     );
