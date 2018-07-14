@@ -32,8 +32,7 @@ const Selections = styled('a')`
   padding: 0 5px;
 
   &:hover {
-    color: #f5f9ff;
-    background-color: #9b4278;
+    background-color: #008a62;
   }
 `;
 

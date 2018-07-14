@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { injectGlobal } from 'emotion';
 import Search from './components/Search';
+import FoursquareVenues from './components/FoursquareVenues';
 
 injectGlobal`
   * {
@@ -24,9 +25,10 @@ injectGlobal`
 class App extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Search />
-      </div>
+        <FoursquareVenues />
+      </React.Fragment>
     );
   }
 }
