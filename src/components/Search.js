@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'react-emotion';
 
-const fontSize = 35;
-
 const SearchBar = styled('div')`
   display: flex;
   justify-content: center;
@@ -12,28 +10,14 @@ const SearchBar = styled('div')`
   text-align: center;
 `;
 
-const Text = styled('p')`
+const Text = styled('h1')`
   display: inline-block;
-  font-size: ${fontSize}px;
-  line-height: ${fontSize + 5}px;
+  font-size: 35px;
+  line-height: 40px;
   font-weight: bold;
   color: white;
   margin: 0;
   padding: 0;
-`;
-
-const Selections = styled('a')`
-  display: inline-block;
-  font-size: ${fontSize}px;
-  line-height: ${fontSize + 5}px;
-  font-weight: bold;
-  color: white;
-  margin: 0 10px;
-  padding: 0 5px;
-
-  &:hover {
-    background-color: #008a62;
-  }
 `;
 
 /**
@@ -44,16 +28,7 @@ class Search extends Component {
   render() {
     return (
       <SearchBar>
-        <div>
-          <Text>Searching for all venues around your current location</Text>
-          {/* In the future this can be expanded on */}
-          {/* <Text>Searching for</Text>
-          <Selections href="#">all venues</Selections>
-          <Text>within</Text>
-          <Selections href="#">50km</Selections>
-          <Text>of</Text>
-          <Selections href="#">my current location</Selections> */}
-        </div>
+        <Text>Searching for all venues around your current location</Text>
       </SearchBar>
     );
   }

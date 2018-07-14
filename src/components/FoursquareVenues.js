@@ -43,11 +43,7 @@ class FoursquareVenues extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <VenueList venues={this.state.venues} />
-      </div>
-    );
+    return <VenueList venues={this.state.venues} />;
   }
 }
 

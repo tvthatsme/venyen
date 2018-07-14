@@ -14,15 +14,15 @@ const Message = styled('div')`
 class GeoLocation extends React.Component {
   render() {
     return !this.props.isGeolocationAvailable ? (
-      <Message>Your browser does not support Geolocation</Message>
+      <Message>Your browser does not support Geolocation :(</Message>
     ) : !this.props.isGeolocationEnabled ? (
-      <Message>Geolocation is not enabled</Message>
+      <Message>Geolocation is not enabled... Try refreshing?</Message>
     ) : this.props.coords ? (
       // Use a render function to render whatever component needs
       // latitude and longitude information
       this.props.render(this.props.coords.latitude, this.props.coords.longitude)
     ) : (
-      <Message>Getting the location data&hellip; </Message>
+      <Message>Getting the location data...</Message>
     );
   }
 }
